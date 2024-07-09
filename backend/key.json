@@ -1,14 +1,13 @@
 {
-    "type": "service_account",
-    "project_id": "myntra-project-e8c14",
-    "private_key_id": "39c612f8c3a5334b34f4ee1b14d215f31b586e36",
-    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCDVn+tLQJigVW0\nAIVV1Jwz4zF0sHO2Owikgxl65/Ujn/upKuC9FClX3hOuwBuSUzhJNJjcpwZQfJl5\nUOVmFMakEsA3CEdcibrDCmwIXCSldxWEYo6gOQ1h8orzpZKMN2xk7fh5euuB0EXV\n0Eag4a7E2QySwdRTZj+J/H7IUkRDJlWdjqozns08wSYuUq7SIHFK10y7cJztFUdP\nd967jYvyVhAWAZJvp+T7kHJkQrsXRyKe0xewZCXyEKhNMuOw5hsX0Oxe3TrxNVDf\nPYYkDy9oW4hlKLDrBTsjGsRqXeS0+IHa7GxgFRenCQqrlWWgFXxaVKX8MBOzhWcH\n6ZxhPR5PAgMBAAECggEAIOh6g0TE1TO86qY6wn/MR8AEc02HIMD38Gic6MvYA34h\ni4if2SCFH2wYmG+wOOC7OLSCHL+I+H/P4LLhV8ua3h+IpAFiCBDGh/pDiXC1CfSl\noo8jV4gUD1e7c0MoThPRCBUMbjvbaKJr7SALomIJ7W7JFLiWX/M9tnBawAzE5+IG\nK+xDuq70BfdJCyFIduMaB0rQyvxCOVx0YLgrBhVeM6IKmR69AfGFjVJfLjjzM1M6\nccbLVMafTERNLhLvuEza0Pvaz+H+d/+U5pVS8kfiTwGPfAeCksB2yzVokYEg1yOj\nUDEnTFpEjhBQyHW+8/2ofiwLrS6pMiajmsfWd7KJAQKBgQC4EJvwTG0nwspkilRh\nCfYSuJ+lRXlcryZoHP8RIfevE9Y1i1pQXVrQFiSvy/+En94/GfYqLVcJ63gmthcL\ngjp3KkWYz9SuoQemMcDi8uoS4yvdzVfHgJRYpO25lGXQ6MKjMbtoHTBAh2FkcyFo\ntSpjoGjdnvKcSgJDPQyRvtl3zwKBgQC2qqPQ6hk8wtNmC0lIDstF4umgOvEq68em\n6lBWBbXJRdMldrFzqua+FDz/npsGAlLdLIMNCor2+HZHlyNcqSKKuMMoGTVw9Aa9\nleVghUUnozLWy+bSVrwgz3U9/L7ffWGHnDKpWW2MdX6KmVHe/UYKNv1S1EdMNzzd\nZeGm+d0RgQKBgQCjnxAf8rBt0fi8m0Ma6BH43mn8LuANhh1sG6qZ/koBNm8LNg9Y\ntUQPCkAejgdcTAjyqw9qutdOmCU8tE2UC3YRjGBF0SpM+hSkpkHC/REbLRpHl0xa\nqnA0xJgWilZf+SlcjM79ZEUKd84Zz0Z5n+JIocXWjH86c4fDYbeUr8T9fQKBgD1w\nWZccFg78zJPG+gf1ieNgtgnBqXoxQb7fktPMKd+fz6wLJxZrhh6qufWUSDoWL/7a\nSN3rDOCSo13i9O7mqIqWKHXlPLdYLKg5saPsT11Mo/3hKSrYJ4C1po6J4z1Sc6pk\nHBofzRvwLPa7KPFiqNsosb3ZTn3RGnSxHtvFsNiBAoGBAJqR+E4OseFrhmawUI/R\nGXqmFSSgVM0KReMws8JyPEXSA7TEe7twUPzne0TxWeA9g2ay/ahZid/2ntBsqiIa\n4AkT+EPx275xNVSV+u/frYxs8O9WJ58jX8JbY/Vg7bYUCMC8BtK1GiWEWHC+FtXa\nmnNRVjOPztOHs5SmuZv8fycC\n-----END PRIVATE KEY-----\n",
-    "client_email": "firebase-adminsdk-qhwn6@myntra-project-e8c14.iam.gserviceaccount.com",
-    "client_id": "114165628735107876925",
-    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-    "token_uri": "https://oauth2.googleapis.com/token",
-    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qhwn6%40myntra-project-e8c14.iam.gserviceaccount.com",
-    "universe_domain": "googleapis.com"
+  "type": "service_account",
+  "project_id": "myntra-project-e8c14",
+  "private_key_id": "39c612f8c3a5334b34f4ee1b14d215f31b586e36",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCDVn+tLQJigVW0\nAIVV1Jwz4zF0sHO2Owikgxl65/Ujn/upKuC9FClX3hOuwBuSUzhJNJjcpwZQfJl5\nUOVmFMakEsA3CEdcibrDCmwIXCSldxWEYo6gOQ1h8orzpZKMN2xk7fh5euuB0EXV\n0Eag4a7E2QySwdRTZj+J/H7IUkRDJlWdjqozns08wSYuUq7SIHFK10y7cJztFUdP\nd967jYvyVhAWAZJvp+T7kHJkQrsXRyKe0xewZCXyEKhNMuOw5hsX0Oxe3TrxNVDf\nPYYkDy9oW4hlKLDrBTsjGsRqXeS0+IHa7GxgFRenCQqrlWWgFXxaVKX8MBOzhWcH\n6ZxhPR5PAgMBAAECggEAIOh6g0TE1TO86qY6wn/MR8AEc02HIMD38Gic6MvYA34h\ni4if2SCFH2wYmG+wOOC7OLSCHL+I+H/P4LLhV8ua3h+IpAFiCBDGh/pDiXC1CfSl\noo8jV4gUD1e7c0MoThPRCBUMbjvbaKJr7SALomIJ7W7JFLiWX/M9tnBawAzE5+IG\nK+xDuq70BfdJCyFIduMaB0rQyvxCOVx0YLgrBhVeM6IKmR69AfGFjVJfLjjzM1M6\nccbLVMafTERNLhLvuEza0Pvaz+H+d/+U5pVS8kfiTwGPfAeCksB2yzVokYEg1yOj\nUDEnTFpEjhBQyHW+8/2ofiwLrS6pMiajmsfWd7KJAQKBgQC4EJvwTG0nwspkilRh\nCfYSuJ+lRXlcryZoHP8RIfevE9Y1i1pQXVrQFiSvy/+En94/GfYqLVcJ63gmthcL\ngjp3KkWYz9SuoQemMcDi8uoS4yvdzVfHgJRYpO25lGXQ6MKjMbtoHTBAh2FkcyFo\ntSpjoGjdnvKcSgJDPQyRvtl3zwKBgQC2qqPQ6hk8wtNmC0lIDstF4umgOvEq68em\n6lBWBbXJRdMldrFzqua+FDz/npsGAlLdLIMNCor2+HZHlyNcqSKKuMMoGTVw9Aa9\nleVghUUnozLWy+bSVrwgz3U9/L7ffWGHnDKpWW2MdX6KmVHe/UYKNv1S1EdMNzzd\nZeGm+d0RgQKBgQCjnxAf8rBt0fi8m0Ma6BH43mn8LuANhh1sG6qZ/koBNm8LNg9Y\ntUQPCkAejgdcTAjyqw9qutdOmCU8tE2UC3YRjGBF0SpM+hSkpkHC/REbLRpHl0xa\nqnA0xJgWilZf+SlcjM79ZEUKd84Zz0Z5n+JIocXWjH86c4fDYbeUr8T9fQKBgD1w\nWZccFg78zJPG+gf1ieNgtgnBqXoxQb7fktPMKd+fz6wLJxZrhh6qufWUSDoWL/7a\nSN3rDOCSo13i9O7mqIqWKHXlPLdYLKg5saPsT11Mo/3hKSrYJ4C1po6J4z1Sc6pk\nHBofzRvwLPa7KPFiqNsosb3ZTn3RGnSxHtvFsNiBAoGBAJqR+E4OseFrhmawUI/R\nGXqmFSSgVM0KReMws8JyPEXSA7TEe7twUPzne0TxWeA9g2ay/ahZid/2ntBsqiIa\n4AkT+EPx275xNVSV+u/frYxs8O9WJ58jX8JbY/Vg7bYUCMC8BtK1GiWEWHC+FtXa\nmnNRVjOPztOHs5SmuZv8fycC\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-qhwn6@myntra-project-e8c14.iam.gserviceaccount.com",
+  "client_id": "114165628735107876925",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-qhwn6%40myntra-project-e8c14.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
   }
-  

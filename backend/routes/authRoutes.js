@@ -1,32 +1,26 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const authRoutes = require('./routes/authRoutes');
-const path = require('path');
-require('dotenv').config();  // Load environment variables from .env file
+const router = express.Router();
+const User = require('../models/User'); // Adjust path as per your project structure
 
-const app = express();
+router.post('/signup', async (req, res) => {
+  const { email, password } = req.body;
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
+  try {
+    // Check if user already exists in MongoDB
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already exists' });
+    }
 
-// MongoDB connection
-const mongoURI = process.env.MONGO_URI;
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log('MongoDB connected'))
-.catch(err => console.log('MongoDB connection error:', err));
+    // Create new user
+    const newUser = new User({ email, password });
+    await newUser.save();
 
-// Use routes
-app.use('/api', authRoutes);
-app.use(express.static(path.join(__dirname, '../public')));
-
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+    res.status(201).json({ message: 'Signup successful', user: newUser });
+  } catch (error) {
+    console.error('Signup error:', error);
+    res.status(500).json({ message: 'Signup failed' });
+  }
 });
+
+module.exports = router;

@@ -1,17 +1,30 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import {thunk} from 'redux-thunk';
+import rootReducer from './redux/reducers';  // Adjust path as per your file structure
+import App from './App';  // Adjust path as per your file structure
+import SignUp from './components/SignUp';  // Adjust path as per your file structure
+import Login from './components/Login';  // Adjust path as per your file structure
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(
+  rootReducer,
+  composeEnhancers(applyMiddleware(thunk))
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+ReactDOM.render(
+  <Provider store={store}>
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signin" element={<Login />} />
+        {/* Add more routes for other pages/components */}
+      </Routes>
+    </Router>
+  </Provider>,
+  document.getElementById('root')
+);
