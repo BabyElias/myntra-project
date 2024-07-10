@@ -1,17 +1,25 @@
-// frontend/src/firebase.js
-import firebase from 'firebase/app';
-import 'firebase/auth';
-
+import { initializeApp } from 'firebase/app';
+import { getAuth ,createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 const firebaseConfig = {
-    apiKey: "AIzaSyDC3-rVDDM4zlRgM1NzrucY2tYS1uxELgU",
-    authDomain: "myntra-project-e8c14.firebaseapp.com",
-    projectId: "myntra-project-e8c14",
-    storageBucket: "myntra-project-e8c14.appspot.com",
-    messagingSenderId: "728568877045",
-    appId: "1:728568877045:web:f8e5cfe9a3a68d11c01abc",
+    apiKey: "AIzaSyDysU-U-xBj3CSXz3kMrlE3rT7fXLeRn1Y",
+    authDomain: "myntra-project-9c004.firebaseapp.com",
+    databaseURL: "https://myntra-project-9c004-default-rtdb.firebaseio.com",
+    projectId: "myntra-project-9c004",
+    storageBucket: "myntra-project-9c004.appspot.com",
+    messagingSenderId: "120528669370",
+    appId: "1:120528669370:web:301beea677c02914d45083"
 };
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 
-firebase.initializeApp(firebaseConfig);
-
-export const auth = firebase.auth();
-export default firebase;
+export const useFirebase = () => {
+  return {
+    signup: async (email, password) => {
+      await createUserWithEmailAndPassword(auth, email, password);
+    },
+    login: async (email, password) => {
+      await signInWithEmailAndPassword(auth, email, password);
+    },
+    // Add more Firebase authentication methods as needed
+  };
+};

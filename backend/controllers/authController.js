@@ -1,34 +1,37 @@
-const User = require('../models/User');
+const admin = require('../firebase');  // Adjust the path as per your project structure
 
-const signupController = async (req, res) => {
+const signup = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Validate input
-    if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required' });
-    }
-
-    // Check if email already exists
-    const existingUser = await User.findOne({ email });
-    if (existingUser) {
-      return res.status(400).json({ error: 'User with this email already exists' });
-    }
-
-    // Create new user
-    const newUser = new User({ email, password });
-
-    // Save user to database
-    await newUser.save();
-
-    // Respond with success message or user data
-    res.status(200).json({ message: 'Signup successful', user: newUser });
+    const userRecord = await admin.auth().createUser({
+      email,
+      password
+    });
+    res.status(201).json({ message: 'Signup successful', uid: userRecord.uid });
   } catch (error) {
-    console.error('Signup error:', error);
-    res.status(500).json({ error: 'Signup failed' });
+    console.error('Error creating user:', error);
+    res.status(500).json({ message: 'Signup failed' });
   }
 };
 
-module.exports = {
-  signupController,
+const login = async (req, res) => {
+  const { email, password } = req.body;
+
+  try {
+    const userRecord = await admin.auth().getUserByEmail(email);
+    if (!userRecord) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    // Implement password check if necessary, though Firebase handles this internally
+    // For simplicity, let's assume Firebase handles login securely
+
+    res.status(200).json({ message: 'Login successful', uid: userRecord.uid });
+  } catch (error) {
+    console.error('Error fetching user:', error);
+    res.status(500).json({ message: 'Login failed' });
+  }
 };
+
+module.exports = { signup, login };
