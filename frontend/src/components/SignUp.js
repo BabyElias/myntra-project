@@ -1,45 +1,46 @@
 import React, { useState } from 'react';
-import { useFirebase } from '../firebase';
+import axios from 'axios';
 
-const SignUp = () => {
+const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const firebase = useFirebase();
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await firebase.signup(email, password);
-      console.log('Signup successful');
-      // Redirect or show success message
+      const response = await axios.post('http://localhost:5000/api/auth/signup', {
+        email,
+        password
+      });
+      setMessage(response.data.message);
     } catch (error) {
-      console.error('Signup error:', error.message);
-      // Handle error, show message to user
+      console.error('Error during signup:', error);
+      setMessage('Signup failed');
     }
   };
 
   return (
     <div>
-      <h2>Sign Up</h2>
+      <h2>Signup</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
+          placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
         />
         <input
           type="password"
+          placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
         />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Signup</button>
       </form>
+      {message && <p>{message}</p>}
     </div>
   );
 };
 
-export default SignUp;
+export default Signup;
