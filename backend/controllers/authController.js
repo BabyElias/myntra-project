@@ -1,5 +1,5 @@
-const admin = require('../firebase');  // Adjust the path as per your project structure
-const User = require('../models/User');  // Ensure this path matches your project structure
+const admin = require('../firebase');  
+const User = require('../models/User');  
 
 const signup = async (req, res) => {
   const { email, password } = req.body;
@@ -10,10 +10,11 @@ const signup = async (req, res) => {
       password
     });
 
+    
     const user = new User({
-      uid: userRecord.uid,
       email: userRecord.email,
-      createdAt: new Date()
+      password: password, 
+      uid: userRecord.uid 
     });
 
     const savedUser = await user.save();

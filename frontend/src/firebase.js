@@ -20,6 +20,5 @@ export const useFirebase = () => {
     login: async (email, password) => {
       await signInWithEmailAndPassword(auth, email, password);
     },
-    // Add more Firebase authentication methods as needed
   };
 };
