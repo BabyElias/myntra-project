@@ -1,9 +1,11 @@
-// backend/firebase.js
+// backend/firebaseConfig.js
 const admin = require('firebase-admin');
-const serviceAccount = require('./path/to/your/firebase-service-account.json');
+const serviceAccount = require('./key.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://myntra-project-e8c14.firebaseio.com'
 });
 
 module.exports = admin;
+
