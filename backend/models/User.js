@@ -17,9 +17,10 @@ const UserSchema = new Schema({
     unique: true
   },
   wardrobes: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Wardrobe'
+    type: String
   }]
 });
 
 module.exports = mongoose.model('User', UserSchema);
+//ek id pehle se
+//ab uss id k wardrobe mein product add kardo
