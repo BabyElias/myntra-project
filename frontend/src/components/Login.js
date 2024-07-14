@@ -24,7 +24,7 @@ const Login = () => {
         password,
       });
       setMessage(response.data.message);
-      navigate('/');
+      navigate('/homepage');
     } catch (error) {
       console.error('Error during login:', error);
       setError('Login failed');
