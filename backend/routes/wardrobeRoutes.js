@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const Wardrobe = require('../models/Wardrobe');
+const Product= require('../models/Product');
 const mongoose = require('mongoose');
 
 // Fetch all wardrobes for a user by email
@@ -62,7 +63,8 @@ router.post('/addToWardrobe/:email/:productId', async (req, res) => {
       wardrobe = new Wardrobe({
         userId: user._id,
         name: wardrobeName,
-        products: [productId]
+        products: [productId],
+        thumbnail: (await Product.findById(productId)).imageUrl
       });
       user.wardrobes.push(wardrobeName);
       await user.save();

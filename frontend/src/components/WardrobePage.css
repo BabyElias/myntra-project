@@ -12,13 +12,13 @@
 }
 
 .photo-space .photo-left {
-  position: absolute; /* Position the left image absolutely */
+  position: absolute;
   top: 0;
-  left: 10%; /* Adjust distance from left side */
-  width: 30%; /* Adjust width to take up 40% of the container width */
-  height: 100%; /* Fill the entire height of the container */
-  object-fit: cover; /* Ensure the entire image fits within the space */
-  border-radius: 0; /* No rounded corners */
+  left: 10%; 
+  width: 30%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 0; 
 }
 
 .photo-space .photo-right {

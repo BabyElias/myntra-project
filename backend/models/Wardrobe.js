@@ -14,6 +14,9 @@ const wardrobeSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Product'
   }],
+  thumbnail: {
+    type: String 
+  },
   public: {
     type: Boolean,
     default: false

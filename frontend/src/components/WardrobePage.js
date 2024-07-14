@@ -29,14 +29,14 @@ const WardrobePage = () => {
     <div className="wardrobe-page">
       <Navbar />
       <div className="photo-space">
-      <img src={left} alt="Left Image" lassName="photo-left" />
+      <img src={left} alt="Left Image"/>
         <img src={wardrobeimg} alt="Wardrobe Image" className="photo-right"c />
         
       </div>
       <div className="wardrobes-container">
         {wardrobes.map((wardrobe) => (
           <Link to={`/wardrobe/details/${wardrobe._id}`} key={wardrobe._id} className="wardrobe-card">
-            <img src={exphoto} alt="Wardrobe" className="wardrobe-image" />
+            <img src={wardrobe.thumbnail || exphoto} alt="Wardrobe" className="wardrobe-image" />
             <div className="wardrobe-details">
               <h3 className="wardrobe-name">{wardrobe.name}</h3>
             </div>
