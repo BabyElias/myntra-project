@@ -1,0 +1,11 @@
+
+.sliderimgdiv{
+    margin-top: 4.5%;
+    margin-bottom: 4%;
+    width: 100%;
+   
+}
+.sliderimgdiv img{
+    width: 100%;
+    object-fit: cover;  
+}

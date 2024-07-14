@@ -5,6 +5,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import WardrobePage from './components/WardrobePage';
 import WardrobeDetailsPage from './components/WardrobeDetailsPage';
+import { HomePage } from './components/HomePage';
 const App = () => {
   return (
     <Router>
@@ -12,10 +13,10 @@ const App = () => {
         <Routes>
         <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path="/homepage" element={<HomePage />} />
           <Route path="/signin" element={<Login />} />
           <Route path="/wardrobe" element={<WardrobePage/>} />
           <Route path="/wardrobe/details/:wardrobeId" element={<WardrobeDetailsPage/>} />
-          {/* Add more routes for other pages/components */}
         </Routes>
       </div>
     </Router>
