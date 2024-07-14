@@ -1,0 +1,70 @@
+/* WardrobeDetailsPage.css */
+.wardrobe-details-page {
+  padding-top: 70px; /* Add padding to create space between navbar and content */
+}
+
+.wardrobe-info {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.wardrobe-info h2 {
+  text-align: center;
+  color: #ff69b4; /* Pink color for wardrobe name */
+  margin-bottom: 20px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Distribute cards evenly with space around */
+}
+
+.product-card {
+  width: calc(25% - 20px); /* Adjust card width to fit four cards per row */
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: #fff; /* Card background color */
+}
+
+.product-card .product-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px; /* Rounded corners for images */
+}
+
+.product-card .product-details {
+  padding-top: 10px;
+}
+
+.product-name {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: #ff69b4; /* Pink color for product price */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+  .product-card {
+    width: calc(50% - 20px); /* Adjust card width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: calc(100% - 20px); /* Adjust card width for mobile screens */
+  }
+}

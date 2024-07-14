@@ -1,0 +1,80 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto new lines */
+    justify-content: space-around; /* Distribute cards evenly with space around */
+    padding: 20px; /* Padding for spacing */
+    max-width: 1200px; /* Max width of container */
+    margin: 0 auto; /* Center container */
+    margin-top: 80px; /* Space between navbar and product cards */
+  }
+  
+  .product-card {
+    width: calc(25% - 20px); /* Adjust card width to fit five cards per row */
+    margin: 10px; /* Adjust margin between cards */
+    padding: 10px; /* Padding inside the card */
+    border: 1px solid #ddd; /* Border for each card */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center content vertically */
+    text-align: center; /* Center text horizontally */
+  }
+  
+  .product-card img {
+    max-width: 100%; /* Ensure images fit within their container */
+    border-radius: 8px; /* Rounded corners for images */
+  }
+  
+  .product-details {
+    padding-top: 10px; /* Padding above product details */
+  }
+  
+  .product-name {
+    font-size: 18px; /* Adjust font size for product name */
+    margin-bottom: 8px; /* Margin below product name */
+  }
+  
+  .product-price {
+    font-size: 16px; /* Adjust font size for price */
+    color: #333; /* Price color */
+  }
+  
+  .add-to-bag-btn {
+    background-color: #ff69b4; /* Button background color */
+    color: whitesmoke; /* Button text color */
+    border: none; /* No border */
+    padding: 8px 12px; /* Padding inside button */
+    font-size: 14px; /* Button font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 10px; /* Margin above button */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .options-dropdown {
+    margin-top: 10px; /* Margin above options dropdown */
+  }
+  
+  /* Additional styling for dropdown inputs/selects/buttons */
+  .wardrobe-input,
+  .wardrobe-select,
+  .add-to-wardrobe-btn {
+    margin-top: 5px; /* Adjust top margin */
+    padding: 8px; /* Adjust padding */
+    font-size: 14px; /* Adjust font size */
+    border: 1px solid #ddd; /* Border for inputs/selects */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .add-to-wardrobe-btn {
+    background-color: #ff69b4; /* Confirm button background color */
+    color: #fff; /* Confirm button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+  }
+  
+  .myntra-logo {
+    width: 100px; /* Adjust logo width */
+    margin-bottom: 10px; /* Margin below logo */
+  }
+  

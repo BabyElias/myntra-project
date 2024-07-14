@@ -22,8 +22,15 @@ router.get('/:email', async (req, res) => {
     // Extract only the names from the wardrobes
     const wardrobeNames = wardrobes.map(wardrobe => wardrobe.name);
 
-    // Send the names of wardrobes as response
-    res.status(200).json(wardrobeNames);
+    // // Send the names of wardrobes as response
+    // res.status(200).json(wardrobeNames);
+    // const wardrobeData = wardrobes.map(wardrobe => ({
+    //   _id: wardrobe._id,
+    //   name: wardrobe.name,
+    // }));
+
+    // Send response with wardrobe data
+    res.status(200).json(wardrobes);
   } catch (error) {
     console.error('Error fetching wardrobes:', error);
     res.status(500).json({ message: 'Internal Server Error' });
@@ -77,4 +84,17 @@ router.post('/addToWardrobe/:email/:productId', async (req, res) => {
   }
 });
 
+router.get('/details/:wardrobeId', async (req, res) => {
+  const { wardrobeId } = req.params;
+
+  try {
+    const wardrobe = await Wardrobe.findById(wardrobeId).populate('products');
+    if (!wardrobe) {
+      return res.status(404).send({ message: 'Wardrobe not found' });
+    }
+    res.status(200).send(wardrobe);
+  } catch (error) {
+    res.status(500).send({ message: 'Error fetching wardrobe details', error });
+  }
+});
 module.exports = router;

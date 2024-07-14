@@ -1,8 +1,8 @@
-// components/Home.js
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Product from './Product';
+import Navbar from './Navbar';
+import './ProductCard.css'; // Import the CSS for styling
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -22,9 +22,12 @@ const Home = () => {
 
   return (
     <div className="home">
-      {products.map(product => (
-        <Product key={product._id} product={product} />
-      ))}
+      <Navbar />
+      <div className="product-container">
+        {products.map(product => (
+          <Product key={product._id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };

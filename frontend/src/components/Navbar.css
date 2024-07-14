@@ -1,0 +1,64 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+  
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+  
+.logo {
+    height: 40px;
+    margin-right: 20px;
+}
+  
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+  
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+  
+.logout-btn {
+    background-color: #ff69b4; /* Pink color */
+    margin-right: 40px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+  
+.logout-btn:hover {
+    background-color: #ff1493; /* Darker pink */
+}
+  
+.wardrobe-icon {
+    font-size: 24px;
+    color: #333;
+}
+  
+.wardrobe-icon:hover {
+    color: #ff69b4; /* Pink color */
+}
