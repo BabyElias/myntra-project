@@ -10,7 +10,6 @@ router.get('/:email', async (req, res) => {
   const { email } = req.params;
 
   try {
-    // Find the user by email
     const user = await User.findOne({ email: email });
     if (!user) {
       return res.status(404).json({ message: 'User not found' });
@@ -21,13 +20,6 @@ router.get('/:email', async (req, res) => {
 
     // Extract only the names from the wardrobes
     const wardrobeNames = wardrobes.map(wardrobe => wardrobe.name);
-
-    // // Send the names of wardrobes as response
-    // res.status(200).json(wardrobeNames);
-    // const wardrobeData = wardrobes.map(wardrobe => ({
-    //   _id: wardrobe._id,
-    //   name: wardrobe.name,
-    // }));
 
     // Send response with wardrobe data
     res.status(200).json(wardrobes);
@@ -40,7 +32,8 @@ router.get('/:email', async (req, res) => {
 // Add product to wardrobe
 router.post('/addToWardrobe/:email/:productId', async (req, res) => {
   const { email, productId } = req.params;
-  const { wardrobeName, existingWardrobeName } = req.body;
+  const { wardrobeName, wardrobeId } = req.body;
+  console.log(wardrobeName, wardrobeId);
 
   try {
     const user = await User.findOne({ email: email });
@@ -50,9 +43,9 @@ router.post('/addToWardrobe/:email/:productId', async (req, res) => {
 
     let wardrobe;
 
-    if (existingWardrobeName) {
+    if (!wardrobeName) {
       // Find the existing wardrobe
-      wardrobe = await Wardrobe.findOne({ userId: user._id, name: existingWardrobeName });
+      wardrobe = await Wardrobe.findOne({ userId: user._id, _id: wardrobeId});
       if (!wardrobe) {
         return res.status(404).json({ message: 'Wardrobe not found' });
       }

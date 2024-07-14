@@ -30,8 +30,9 @@ const Product = ({ product }) => {
   const handleAddToWardrobe = async () => {
     try {
       console.log(`Adding product ${product._id} to wardrobe ${selectedWardrobe || wardrobeName}`);
+      console.log('Selected wardrobe:', selectedWardrobe);
       const response = await axios.post(`http://localhost:5000/api/wardrobes/addToWardrobe/${userEmail}/${product._id}`, {
-        wardrobeName: selectedWardrobe ? '' : wardrobeName, // Send wardrobe name only if a new wardrobe is being created
+        wardrobeName: selectedWardrobe ? null : wardrobeName, // Send wardrobe name only if a new wardrobe is being created
         wardrobeId: selectedWardrobe // Send existing wardrobe ID if selected
       });
       alert(response.data.message);
