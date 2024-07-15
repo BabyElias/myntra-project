@@ -38,6 +38,7 @@ Firstly, the Ultimate User graph for each user is made by mapping their fashion 
 
 ![Screenshot 2024-07-13 192045](https://github.com/user-attachments/assets/c264a481-4d9c-42a8-a48a-ae27a308edc1)   
 ![image](https://github.com/user-attachments/assets/5ab50b44-0b26-4a91-aa62-dc70dbe9b255)
+![Screenshot 2024-07-15 152418](https://github.com/user-attachments/assets/a9eb72c9-dc8c-4e90-8720-63ec2f1161fa)
 
 ## Demo
 
