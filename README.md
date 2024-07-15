@@ -2,7 +2,7 @@
 This is team `Devdivas` submission for `Myntra Hackerramp 2024`
 
 # My Wardrobe 
-A personalized fashion management and collaboration feature within the Myntra app.
+Welcome to **My Wardrobe** – your go-to feature for collaborative fashion and staying on top of the latest trends. Create, share, and blend wardrobes with friends to make fashion a social and interactive experience!
 
 ## Index
 1. [Inspiration](#inspiration)
