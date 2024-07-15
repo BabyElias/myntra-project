@@ -34,7 +34,7 @@ Introducing Myntra's My Wardrobe, your ultimate fashion management and collabora
 4. **Fashion Similarity Score**: Discover how your fashion choices align with your friends’. Make fashion a fun, social activity by seeing how well your styles mesh.
 
  ## Implementation
-Firstly, the Ultimate User graph for each user is made by mapping their fashion preferences, wardrobe choices, searches, purchases and other app interactions internally to metadata tags. The graph utilises these metadata tags as graph nodes, while the edge weights are calculated based on user's affinity for products of each metadata type.We would highly urge you to checkout our [complete pitch deck](https://docs.google.com/presentation/d/1Ow_ejxT51gcIEFiucckbR0O6dky9ouw3/edit?usp=sharing&ouid=117216112777092301971&rtpof=true&sd=true) to understand all the components of the solution and its implementation.
+Firstly, the Ultimate User graph for each user is made by mapping their fashion preferences, wardrobe choices, searches, purchases and other app interactions internally to metadata tags. The graph utilises these metadata tags as graph nodes, while the edge weights are calculated based on user's affinity for products of each metadata type.We would highly urge you to checkout our [complete pitch deck](https://drive.google.com/file/d/1Jx8SZ29iNiPXzBeavMATckn7_L-EEtNB/view?usp=drive_link) to understand all the components of the solution and its implementation.
 
 ![Screenshot 2024-07-13 192045](https://github.com/user-attachments/assets/c264a481-4d9c-42a8-a48a-ae27a308edc1)   
 ![image](https://github.com/user-attachments/assets/5ab50b44-0b26-4a91-aa62-dc70dbe9b255)
