@@ -41,7 +41,7 @@ Firstly, the Ultimate User graph for each user is made by mapping their fashion 
 ![Screenshot 2024-07-15 152418](https://github.com/user-attachments/assets/a9eb72c9-dc8c-4e90-8720-63ec2f1161fa)
 
 ## Demo
-[Watch the video](https://drive.google.com/file/d/1VUb2-Tsf366Q38SVwQTMuRbzU6tQF23M/view?usp=drive_link)
+[Attached video](https://drive.google.com/file/d/1VUb2-Tsf366Q38SVwQTMuRbzU6tQF23M/view?usp=drive_link)
 ## Techstack
 - **Frontend**: ReactJS, HTML, CSS
 - **Backend**: Node.js, Express
