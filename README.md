@@ -10,7 +10,7 @@ Welcome to **My Wardrobe** – your go-to feature for collaborative fashion and 
 3. [Solution](#solution)
 6. [Key Features](#Key-Features)
 7. [Implementation](#implementation)
-8. [Website Glimpses](#Website-Glimpses)
+8. [Demo](#Demo)
 9. [Techstack](#Techstack)
 10. [Future Scope](#future-scope)
 
